@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel do Motoboy</title>
+<link rel="stylesheet" href="../assets/css/painel.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topo">
+        <div>
+            <h1>🏍️ Painel do Motoboy</h1>
+            <span id="dataAtual" class="data-atual"></span>
+        </div>
+    </div>
+
+    <!-- Botão de localização -->
+    <button id="btnLocalizacao" class="btn-localizacao">
+        📍 Compartilhar Localização
+    </button>
+    <p id="statusLoc" class="status-loc off">Localização desativada</p>
+
+    <!-- Contadores -->
+    <div class="cards">
+        <div class="card-info azul">
+            <span class="ci-label">Total Hoje</span>
+            <span class="ci-valor" id="totalPedidos">0</span>
+        </div>
+        <div class="card-info amarelo">
+            <span class="ci-label">Pendentes</span>
+            <span class="ci-valor" id="totalRecebidos">0</span>
+        </div>
+        <div class="card-info roxo">
+            <span class="ci-label">Em Rota</span>
+            <span class="ci-valor" id="totalRota">0</span>
+        </div>
+        <div class="card-info verde">
+            <span class="ci-label">Entregues</span>
+            <span class="ci-valor" id="totalEntregues">0</span>
+        </div>
+    </div>
+
+    <h2 class="secao-titulo">📋 Pedidos do Dia</h2>
+    <div id="pedidos"></div>
+
+</div>
+
+<script type="module" src="../assets/js/motoboy.js"></script>
+</body>
+</html>

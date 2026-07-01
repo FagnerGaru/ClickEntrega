@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acesso Administrativo</title>
+<link rel="stylesheet" href="../assets/css/admin.css">
+<style>
+/* ── Tela de seleção de painel ── */
+.menu-paineis {
+    display: none;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 0 16px;
+}
+.menu-paineis h2 {
+    color: #1e40af;
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+.menu-paineis p {
+    color: #64748b;
+    font-size: .9rem;
+    margin-bottom: 28px;
+}
+.painel-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.painel-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1e293b;
+    transition: border-color .2s, box-shadow .2s, transform .1s;
+}
+.painel-btn:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 16px rgba(37,99,235,.12);
+    transform: translateY(-1px);
+}
+.painel-btn .icone {
+    font-size: 2rem;
+    width: 48px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.painel-btn .texto strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+.painel-btn .texto span {
+    font-size: .82rem;
+    color: #64748b;
+}
+.btn-sair {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: border-color .2s, color .2s;
+}
+.btn-sair:hover { border-color: #ef4444; color: #ef4444; }
+</style>
+</head>
+<body>
+
+<!-- Tela de login -->
+<div class="login" id="telaLogin">
+    <h2>🔐 Painel Administrativo</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="senha" placeholder="Senha">
+    <button id="btnLogin">Entrar</button>
+</div>
+
+<!-- Tela de seleção de painel (aparece após login) -->
+<div class="menu-paineis" id="telaMenu">
+    <h2>Olá! 👋</h2>
+    <p id="emailLogado"></p>
+
+    <div class="painel-opcoes">
+
+        <a class="painel-btn" href="./dashboard.html">
+            <span class="icone">📊</span>
+            <div class="texto">
+                <strong>Dashboard</strong>
+                <span>Visão geral, faturamento e filtros por período</span>
+            </div>
+        </a>
+
+        <a class="painel-btn" href="./admin.html">
+            <span class="icone">📦</span>
+            <div class="texto">
+                <strong>Pedidos</strong>
+                <span>Listar e alterar status de todos os pedidos</span>
+            </div>
+        </a>
+
+        <a class="painel-btn" href="./painel.html">
+            <span class="icone">🏍️</span>
+            <div class="texto">
+                <strong>Painel do Motoboy</strong>
+                <span>Pedidos do dia, navegação e compartilhar localização</span>
+            </div>
+        </a>
+
+        <a class="painel-btn" href="./rastreio.html">
+            <span class="icone">🔎</span>
+            <div class="texto">
+                <strong>Rastreamento</strong>
+                <span>Consultar um pedido pelo código de rastreio</span>
+            </div>
+        </a>
+
+    </div>
+
+    <button class="btn-sair" id="btnSair">Sair da conta</button>
+</div>
+
+<script type="module" src="../assets/js/login.js"></script>
+</body>
+</html>

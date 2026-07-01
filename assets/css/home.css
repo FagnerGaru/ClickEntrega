@@ -1,0 +1,43 @@
+.home{
+
+    max-width:500px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding-top:120px;
+
+}
+
+.home h1{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.home p{
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+.home .btn{
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    background:#FF6B00;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+}

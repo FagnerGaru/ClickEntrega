@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carregando...</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #334155;
+      border-top: 6px solid #22c55e;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: normal;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <h1>Preparando sua entrega...</h1>
+
+  <script>
+    // tempo de loading (em ms)
+    setTimeout(() => {
+      window.location.href = "./pages/solicitar.html";
+    }, 2000);
+  </script>
+
+</body>
+
+</html>

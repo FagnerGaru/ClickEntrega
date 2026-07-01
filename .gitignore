@@ -1,0 +1,8 @@
+# Credenciais — NUNCA subir isso pro GitHub
+assets/js/config.js
+
+# Outros arquivos que não devem ir ao repositório
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

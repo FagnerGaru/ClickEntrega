@@ -1,0 +1,342 @@
+.card{
+    max-width:700px;
+    margin:auto;
+
+    background:#F8FAFC;
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+}
+
+h1{
+    color:var(--text);
+
+    font-size:32px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin-bottom:4px;
+}
+
+.subtitulo{
+    color:var(--text-secondary);
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+p{
+    color:var(--text-secondary);
+}
+
+/* BLOCO LOCAL E DESTINO */
+
+.box{
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    margin-bottom:24px;
+}
+
+.box h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:none;
+
+    padding:0;
+
+    margin-bottom:20px;
+
+    color:var(--blue);
+
+    font-size:32px;
+
+    font-weight:700;
+}
+
+.box:nth-of-type(2) h3{
+    color:var(--primary);
+}
+
+label{
+    display:block;
+
+    margin-top:12px;
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:var(--text);
+}
+
+input,
+select{
+    width:100%;
+
+    height:52px;
+
+    padding:0 16px;
+
+    margin-bottom:12px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:16px;
+
+    background:#FFFFFF;
+
+    font-size:15px;
+
+    transition:.2s ease;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(249,115,22,.12);
+}
+
+button{
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn-continuar{
+    width:100%;
+    height:56px;
+
+    background:#FFFFFF;
+
+    color:#F97316;
+
+    border:2px solid #F97316;
+
+    border-radius:16px;
+
+    font-size:16px;
+    font-weight:700;
+
+    margin-top:16px;
+    margin-bottom:20px;
+
+    transition:.2s;
+}
+
+.btn-continuar:hover{
+    background:#FFF7ED;
+}
+
+.btn-enviar{
+    width:100%;
+
+    height:72px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FF6B00,
+        #FF7A00
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 15px 35px rgba(255,107,0,.35);
+}
+
+.btn-enviar:hover{
+    transform:translateY(-2px);
+}
+
+.add-destino{
+    height:56px;
+
+    background:#fff;
+
+    color:#F97316;
+
+    border:2px solid #F97316;
+
+    border-radius:16px;
+
+    font-weight:700;
+}
+
+.add-destino:hover{
+    background:#F97316;
+    color:#fff;
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+.add-btn{
+    width:100%;
+
+    height:80px;
+
+    background:#FFFFFF;
+
+    border:2px dashed var(--blue);
+
+    border-radius:20px;
+
+    color:var(--blue);
+
+    font-size:22px;
+
+    font-weight:700;
+}
+
+.add-btn:hover{
+    background:#EFF6FF;
+}
+
+.extra-box{
+    margin-top:20px;
+
+    padding:20px;
+
+    background:#FFF7ED;
+
+    border:1px solid #FED7AA;
+
+    border-radius:var(--radius-md);
+}
+
+/* TOTAL */
+
+#total{
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    margin:24px 0;
+}
+
+.total-label{
+    color:#64748B;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+}
+
+.total-valor{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:6px;
+}
+
+.moeda{
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin-top:8px;
+}
+
+.numero{
+    font-size:50px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    line-height:1;
+}
+
+@media (max-width:600px){
+
+    body{
+        padding:16px;
+    }
+
+    .card{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .box{
+        padding:18px;
+    }
+
+    .box h3{
+        font-size:16px;
+    }
+
+    #total{
+        font-size:22px;
+    }
+}
+
+.logo{
+    text-align:center;
+    font-size:48px;
+    color:#FF6B00;
+    margin-bottom:20px;
+}

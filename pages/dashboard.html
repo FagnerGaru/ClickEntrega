@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<h1>📦 Painel de Pedidos</h1>
+
+<div class="cards">
+    <div class="info-card">
+        <span>Total Pedidos</span>
+        <h2 id="totalPedidos">0</h2>
+    </div>
+    <div class="info-card">
+        <span>Recebidos</span>
+        <h2 id="totalRecebidos">0</h2>
+    </div>
+    <div class="info-card">
+        <span>Entregues</span>
+        <h2 id="totalEntregues">0</h2>
+    </div>
+    <div class="info-card">
+        <span>Faturamento</span>
+        <h2 id="faturamento">R$ 0,00</h2>
+    </div>
+</div>
+
+<div class="filtros">
+    <h2>Filtrar por período:</h2>
+    <input type="date" id="dataInicio">
+    <input type="date" id="dataFim">
+    <button id="btnFiltrar">🔍 Filtrar</button>
+    <button id="btnAtualizar">🔄 Atualizar</button>
+</div>
+
+<input id="busca" placeholder="🔎 Buscar por número ou nome do cliente">
+
+<div id="pedidos"></div>
+
+<script type="module" src="../assets/js/admin.js"></script>
+</body>
+</html>

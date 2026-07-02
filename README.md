@@ -2,7 +2,7 @@
 
 Sistema web completo para gerenciamento de entregas com motoboy — solicitação de pedidos, rastreamento em tempo real, localização GPS do motoboy e painel administrativo.
 
-Hospedado no **GitHub Pages** · Banco de dados **Supabase**
+Hospedado no **Netlify** · Banco de dados **Supabase**
 
 ---
 
@@ -133,12 +133,12 @@ No painel do Supabase, acesse **SQL Editor** e execute o conteúdo do arquivo `d
 
 No Supabase, vá em **Authentication → Users → Add User** e crie o email e senha do administrador.
 
-### 5. Publique no GitHub Pages
+### 5. Publique no Netlify
 
-1. Suba o código para um repositório no GitHub
-2. Vá em **Settings → Pages**
-3. Em *Source*, selecione `main` e pasta `/root`
-4. Aguarde alguns minutos — o site estará disponível em `https://seu-usuario.github.io/seu-repositorio`
+1. Acesse [app.netlify.com](https://app.netlify.com) e faça login
+2. Arraste a pasta do projeto (com `assets/js/config.js` já preenchido) para a área de deploy manual
+   — ou conecte o repositório do GitHub para deploy automático a cada push
+3. Aguarde a publicação — o site estará disponível na URL gerada pelo Netlify
 
 ---
 
@@ -214,7 +214,7 @@ No Supabase, vá em **Authentication → Users → Add User** e crie o email e s
 
 - **HTML, CSS e JavaScript** puro — sem frameworks, sem build
 - **Supabase** — banco de dados PostgreSQL + autenticação
-- **GitHub Pages** — hospedagem gratuita
+- **Netlify** — hospedagem gratuita
 - **Google Maps** — navegação e visualização de localização
 - **WhatsApp API** — envio de mensagens via `wa.me`
 

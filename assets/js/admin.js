@@ -1,6 +1,12 @@
 import { supabase } from './supabase.js';
 import { listarPedidos, listarPedidosPorPeriodo } from './pedidos.js';
 
+const { data: { session } } = await supabase.auth.getSession();
+if (!session) {
+    window.location.href = 'login.html';
+    throw new Error('Não autenticado');
+}
+
 function atualizarContadores(pedidos) {
     const total       = pedidos.length;
     const recebidos   = pedidos.filter(p => p.status === 'Recebido').length;

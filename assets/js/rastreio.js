@@ -62,12 +62,10 @@ async function carregarLocalizacaoMotoboy(pedidoStatus) {
 }
 
 async function carregarPedido() {
-    const { data, error } = await supabase
-        .from('pedidos')
-        .select('*')
-        .eq('codigo_rastreio', codigo)
-        .single();
+    const { data: rows, error } = await supabase
+        .rpc('obter_pedido_rastreio', { p_codigo: codigo });
 
+    const data = rows?.[0];
     const div = document.getElementById('pedido');
 
     if (error || !data) {

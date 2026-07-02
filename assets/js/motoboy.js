@@ -1,6 +1,12 @@
 import { supabase } from './supabase.js';
 import { listarPedidos } from './pedidos.js';
 
+const { data: { session } } = await supabase.auth.getSession();
+if (!session) {
+    window.location.href = 'login.html';
+    throw new Error('Não autenticado');
+}
+
 let todosPedidos   = [];
 let watchId        = null;
 let locAtiva       = false;

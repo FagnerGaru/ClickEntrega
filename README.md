@@ -18,6 +18,40 @@ Hospedado no **GitHub Pages** · Banco de dados **Supabase**
 
 ---
 
+## 🧩 Arquitetura
+
+```mermaid
+flowchart TD
+    subgraph Cliente
+        A["solicitar.html<br/>Pedir entrega"] -->|insert pedido| DB[("Supabase<br/>Postgres")]
+        A -->|abre resumo| WA["WhatsApp<br/>wa.me"]
+        C["rastreio.html<br/>Acompanhar pedido"] -->|RPC obter_pedido_rastreio| DB
+    end
+
+    subgraph Motoboy
+        ML["login.html"] -->|autentica| AUTH["Supabase Auth"]
+        ML --> P["painel.html"]
+        P -->|lista / atualiza status| DB
+        P -->|envia GPS| DB
+        AUTH -. sessão .-> P
+    end
+
+    subgraph Administrador
+        AL["login.html"] --> AUTH
+        AL --> DASH["dashboard.html / admin.html"]
+        DASH -->|lista / atualiza status| DB
+        AUTH -. sessão .-> DASH
+    end
+
+    DB -->|localização do motoboy| C
+```
+
+- **Cliente**: cria o pedido e recebe o link de rastreio, sem precisar de login.
+- **Motoboy** e **Administrador**: fazem login via Supabase Auth e só depois enxergam os pedidos e podem alterá-los.
+- **Banco de dados**: Supabase (Postgres) com Row Level Security controlando o que cada perfil pode ler/escrever.
+
+---
+
 ## 🗂️ Estrutura do Projeto
 
 ```

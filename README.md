@@ -189,3 +189,28 @@ No Supabase, vá em **Authentication → Users → Add User** e crie o email e s
 ## 📄 Licença
 
 Este projeto está licenciado sob a licença MIT — veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+flowchart TD
+    subgraph Cliente
+        A["solicitar.html<br/>Pedir entrega"] -->|insert pedido| DB[("Supabase<br/>Postgres")]
+        A -->|abre resumo| WA["WhatsApp<br/>wa.me"]
+        C["rastreio.html<br/>Acompanhar pedido"] -->|RPC obter_pedido_rastreio| DB
+    end
+
+    subgraph Motoboy
+        ML["login.html"] -->|autentica| AUTH["Supabase Auth"]
+        ML --> P["painel.html"]
+        P -->|lista / atualiza status| DB
+        P -->|envia GPS| DB
+        AUTH -. sessão .-> P
+    end
+
+    subgraph Administrador
+        AL["login.html"] --> AUTH
+        AL --> DASH["dashboard.html / admin.html"]
+        DASH -->|lista / atualiza status| DB
+        AUTH -. sessão .-> DASH
+    end
+
+    DB -->|localização do motoboy| C
+
